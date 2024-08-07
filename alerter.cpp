@@ -9,7 +9,7 @@ int networkAlertStub(float celcius) {
     // Return 200 for ok
     // Return 500 for not-ok
 
-    return (celcius > 200) ? 500 : 200;
+    return (celcius > 150) ? 500 : 200;
 }
 
 
