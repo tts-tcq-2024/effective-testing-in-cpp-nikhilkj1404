@@ -30,6 +30,10 @@ int main() {
     
     assert(alertFailureCount == 1); 
 
+    if (alertFailureCount != 1) {
+        std::cerr << "FALSE POSITIVE! Expected failure but succeeded\n";
+    }
+
     std::cout << alertFailureCount << " alerts failed.\n";
     std::cout << "All is well (maybe!)\n";
     return 0;
