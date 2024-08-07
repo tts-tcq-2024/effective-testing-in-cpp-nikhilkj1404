@@ -1,4 +1,5 @@
 #include <iostream>
+#include <iomanip>
 #include <vector>
 #include <string>
 #include <assert.h>
@@ -29,7 +30,7 @@ std::vector<ColorPair> generateColorMap() {
 
 void printColorMap(const std::vector<ColorPair>& colorMap) {
     for (size_t i = 0; i < colorMap.size(); i++) {
-        // Properly format output with consistent width for alignment
+        
         std::cout << std::setw(2) << i << " | " 
                   << std::setw(6) << colorMap[i].majorColor << " | " 
                   << std::setw(6) << colorMap[i].minorColor << "\n";
