@@ -8,10 +8,12 @@ int alertFailureCount = 0;
 int networkAlertStub(float celcius) {
     std::cout << "ALERT: Temperature is " << celcius << " celcius.\n";
 
-    if (celcius > 100.0) {  
-        return 500;  
+    if (celcius <= 200) {  
+        return 200;  
     }
-    return 200;  
+    else {
+        return 500;
+    }
 }
 
 
@@ -26,8 +28,8 @@ void alertInCelcius(float farenheit) {
 
 
 void testErrorHandling() {
-    alertInCelcius(212.0);  
-    alertInCelcius(77.0);   
+    alertInCelcius(400.5);  
+    alertInCelcius(303.6);   
     assert(alertFailureCount == 1);  
 }
 
